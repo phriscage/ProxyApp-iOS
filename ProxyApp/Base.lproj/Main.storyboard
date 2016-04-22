@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProxyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCD-69-Ek1">
+                                <rect key="frame" x="0.0" y="72" width="600" height="484"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GY6-OZ-fIa">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58M-MD-iOT">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem enabled="NO" title="◀︎" id="FXY-Ny-EDH">
+                                        <connections>
+                                            <action selector="onClickBackButton:" destination="BYZ-38-t0r" id="Xkc-gU-Kua"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="35" style="plain" systemItem="fixedSpace" id="O4g-EU-CJw"/>
+                                    <barButtonItem enabled="NO" title="▶︎" id="Gvy-j7-Wsc">
+                                        <connections>
+                                            <action selector="onClickForwardButton:" destination="BYZ-38-t0r" id="1Ub-8w-Oh4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QdB-AT-liE"/>
+                                    <barButtonItem systemItem="refresh" id="FLe-5E-gMo">
+                                        <connections>
+                                            <action selector="onClickRefreshButton:" destination="BYZ-38-t0r" id="wdy-Mp-vkx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GY6-OZ-fIa" secondAttribute="trailing" id="5BD-6Y-Dae"/>
+                            <constraint firstItem="GY6-OZ-fIa" firstAttribute="trailing" secondItem="uCD-69-Ek1" secondAttribute="trailing" id="89n-aZ-2be"/>
+                            <constraint firstItem="58M-MD-iOT" firstAttribute="trailing" secondItem="uCD-69-Ek1" secondAttribute="trailing" id="Ahd-sX-GGq"/>
+                            <constraint firstItem="uCD-69-Ek1" firstAttribute="top" secondItem="GY6-OZ-fIa" secondAttribute="bottom" id="EIi-2D-Oz3"/>
+                            <constraint firstItem="58M-MD-iOT" firstAttribute="leading" secondItem="uCD-69-Ek1" secondAttribute="leading" id="Ig7-a9-Rkn"/>
+                            <constraint firstItem="GY6-OZ-fIa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="arh-Wg-btc"/>
+                            <constraint firstItem="GY6-OZ-fIa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nwT-AN-Jo1"/>
+                            <constraint firstItem="58M-MD-iOT" firstAttribute="top" secondItem="uCD-69-Ek1" secondAttribute="bottom" id="oA4-FG-huY"/>
+                            <constraint firstItem="58M-MD-iOT" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="oMU-Dx-uKH"/>
+                            <constraint firstItem="GY6-OZ-fIa" firstAttribute="leading" secondItem="uCD-69-Ek1" secondAttribute="leading" id="xUP-rI-oup"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="GY6-OZ-fIa" id="sMO-1a-OaS"/>
+                        <outlet property="webView" destination="uCD-69-Ek1" id="ThP-5Q-XXW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="252"/>
+        </scene>
+    </scenes>
+</document>

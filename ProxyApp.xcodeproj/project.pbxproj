@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D51280451CC9B92500B94CBC /* CustomURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51280441CC9B92500B94CBC /* CustomURLProtocol.swift */; };
+		D55DD36F1CB73F2600A5A523 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DD36E1CB73F2600A5A523 /* Constants.swift */; };
+		D55DD3701CB73F2600A5A523 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DD36E1CB73F2600A5A523 /* Constants.swift */; };
+		D55DD3711CB73F2600A5A523 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DD36E1CB73F2600A5A523 /* Constants.swift */; };
+		D5C424951CB5F42000D77330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C424941CB5F42000D77330 /* AppDelegate.swift */; };
+		D5C424971CB5F42000D77330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C424961CB5F42000D77330 /* ViewController.swift */; };
+		D5C4249A1CB5F42000D77330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C424981CB5F42000D77330 /* Main.storyboard */; };
+		D5C4249C1CB5F42000D77330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C4249B1CB5F42000D77330 /* Assets.xcassets */; };
+		D5C4249F1CB5F42000D77330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C4249D1CB5F42000D77330 /* LaunchScreen.storyboard */; };
+		D5C424AA1CB5F42000D77330 /* ProxyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C424A91CB5F42000D77330 /* ProxyAppTests.swift */; };
+		D5C424B51CB5F42000D77330 /* ProxyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C424B41CB5F42000D77330 /* ProxyAppUITests.swift */; };
+		D5C424C31CB5F44900D77330 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C424C21CB5F44900D77330 /* WebKit.framework */; };
+		D5E9FD6C1CB9704700D85956 /* MyURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9FD6B1CB9704700D85956 /* MyURLProtocol.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5C424A61CB5F42000D77330 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5C424891CB5F42000D77330 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5C424901CB5F42000D77330;
+			remoteInfo = ProxyApp;
+		};
+		D5C424B11CB5F42000D77330 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5C424891CB5F42000D77330 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5C424901CB5F42000D77330;
+			remoteInfo = ProxyApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D51280441CC9B92500B94CBC /* CustomURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomURLProtocol.swift; sourceTree = "<group>"; };
+		D55DD36E1CB73F2600A5A523 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D5C424911CB5F42000D77330 /* ProxyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C424941CB5F42000D77330 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5C424961CB5F42000D77330 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5C424991CB5F42000D77330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5C4249B1CB5F42000D77330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5C4249E1CB5F42000D77330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5C424A01CB5F42000D77330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5C424A51CB5F42000D77330 /* ProxyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProxyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C424A91CB5F42000D77330 /* ProxyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyAppTests.swift; sourceTree = "<group>"; };
+		D5C424AB1CB5F42000D77330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5C424B01CB5F42000D77330 /* ProxyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProxyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C424B41CB5F42000D77330 /* ProxyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyAppUITests.swift; sourceTree = "<group>"; };
+		D5C424B61CB5F42000D77330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5C424C21CB5F44900D77330 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D5E9FD6B1CB9704700D85956 /* MyURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyURLProtocol.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5C4248E1CB5F42000D77330 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C424C31CB5F44900D77330 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C424A21CB5F42000D77330 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C424AD1CB5F42000D77330 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D5C424881CB5F42000D77330 = {
+			isa = PBXGroup;
+			children = (
+				D5C424C21CB5F44900D77330 /* WebKit.framework */,
+				D5C424931CB5F42000D77330 /* ProxyApp */,
+				D5C424A81CB5F42000D77330 /* ProxyAppTests */,
+				D5C424B31CB5F42000D77330 /* ProxyAppUITests */,
+				D5C424921CB5F42000D77330 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5C424921CB5F42000D77330 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5C424911CB5F42000D77330 /* ProxyApp.app */,
+				D5C424A51CB5F42000D77330 /* ProxyAppTests.xctest */,
+				D5C424B01CB5F42000D77330 /* ProxyAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5C424931CB5F42000D77330 /* ProxyApp */ = {
+			isa = PBXGroup;
+			children = (
+				D55DD36E1CB73F2600A5A523 /* Constants.swift */,
+				D5C424941CB5F42000D77330 /* AppDelegate.swift */,
+				D5C424961CB5F42000D77330 /* ViewController.swift */,
+				D5C424981CB5F42000D77330 /* Main.storyboard */,
+				D5C4249B1CB5F42000D77330 /* Assets.xcassets */,
+				D5C4249D1CB5F42000D77330 /* LaunchScreen.storyboard */,
+				D5C424A01CB5F42000D77330 /* Info.plist */,
+				D5E9FD6B1CB9704700D85956 /* MyURLProtocol.swift */,
+				D51280441CC9B92500B94CBC /* CustomURLProtocol.swift */,
+			);
+			path = ProxyApp;
+			sourceTree = "<group>";
+		};
+		D5C424A81CB5F42000D77330 /* ProxyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5C424A91CB5F42000D77330 /* ProxyAppTests.swift */,
+				D5C424AB1CB5F42000D77330 /* Info.plist */,
+			);
+			path = ProxyAppTests;
+			sourceTree = "<group>";
+		};
+		D5C424B31CB5F42000D77330 /* ProxyAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D5C424B41CB5F42000D77330 /* ProxyAppUITests.swift */,
+				D5C424B61CB5F42000D77330 /* Info.plist */,
+			);
+			path = ProxyAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5C424901CB5F42000D77330 /* ProxyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5C424B91CB5F42000D77330 /* Build configuration list for PBXNativeTarget "ProxyApp" */;
+			buildPhases = (
+				D5C4248D1CB5F42000D77330 /* Sources */,
+				D5C4248E1CB5F42000D77330 /* Frameworks */,
+				D5C4248F1CB5F42000D77330 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProxyApp;
+			productName = ProxyApp;
+			productReference = D5C424911CB5F42000D77330 /* ProxyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D5C424A41CB5F42000D77330 /* ProxyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5C424BC1CB5F42000D77330 /* Build configuration list for PBXNativeTarget "ProxyAppTests" */;
+			buildPhases = (
+				D5C424A11CB5F42000D77330 /* Sources */,
+				D5C424A21CB5F42000D77330 /* Frameworks */,
+				D5C424A31CB5F42000D77330 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5C424A71CB5F42000D77330 /* PBXTargetDependency */,
+			);
+			name = ProxyAppTests;
+			productName = ProxyAppTests;
+			productReference = D5C424A51CB5F42000D77330 /* ProxyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5C424AF1CB5F42000D77330 /* ProxyAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5C424BF1CB5F42000D77330 /* Build configuration list for PBXNativeTarget "ProxyAppUITests" */;
+			buildPhases = (
+				D5C424AC1CB5F42000D77330 /* Sources */,
+				D5C424AD1CB5F42000D77330 /* Frameworks */,
+				D5C424AE1CB5F42000D77330 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5C424B21CB5F42000D77330 /* PBXTargetDependency */,
+			);
+			name = ProxyAppUITests;
+			productName = ProxyAppUITests;
+			productReference = D5C424B01CB5F42000D77330 /* ProxyAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5C424891CB5F42000D77330 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Christopher Page";
+				TargetAttributes = {
+					D5C424901CB5F42000D77330 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D5C424A41CB5F42000D77330 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D5C424901CB5F42000D77330;
+					};
+					D5C424AF1CB5F42000D77330 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D5C424901CB5F42000D77330;
+					};
+				};
+			};
+			buildConfigurationList = D5C4248C1CB5F42000D77330 /* Build configuration list for PBXProject "ProxyApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5C424881CB5F42000D77330;
+			productRefGroup = D5C424921CB5F42000D77330 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5C424901CB5F42000D77330 /* ProxyApp */,
+				D5C424A41CB5F42000D77330 /* ProxyAppTests */,
+				D5C424AF1CB5F42000D77330 /* ProxyAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5C4248F1CB5F42000D77330 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C4249F1CB5F42000D77330 /* LaunchScreen.storyboard in Resources */,
+				D5C4249C1CB5F42000D77330 /* Assets.xcassets in Resources */,
+				D5C4249A1CB5F42000D77330 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C424A31CB5F42000D77330 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C424AE1CB5F42000D77330 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5C4248D1CB5F42000D77330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D51280451CC9B92500B94CBC /* CustomURLProtocol.swift in Sources */,
+				D5C424971CB5F42000D77330 /* ViewController.swift in Sources */,
+				D5E9FD6C1CB9704700D85956 /* MyURLProtocol.swift in Sources */,
+				D5C424951CB5F42000D77330 /* AppDelegate.swift in Sources */,
+				D55DD36F1CB73F2600A5A523 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C424A11CB5F42000D77330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C424AA1CB5F42000D77330 /* ProxyAppTests.swift in Sources */,
+				D55DD3701CB73F2600A5A523 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C424AC1CB5F42000D77330 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C424B51CB5F42000D77330 /* ProxyAppUITests.swift in Sources */,
+				D55DD3711CB73F2600A5A523 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5C424A71CB5F42000D77330 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5C424901CB5F42000D77330 /* ProxyApp */;
+			targetProxy = D5C424A61CB5F42000D77330 /* PBXContainerItemProxy */;
+		};
+		D5C424B21CB5F42000D77330 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5C424901CB5F42000D77330 /* ProxyApp */;
+			targetProxy = D5C424B11CB5F42000D77330 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D5C424981CB5F42000D77330 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5C424991CB5F42000D77330 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5C4249D1CB5F42000D77330 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5C4249E1CB5F42000D77330 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5C424B71CB5F42000D77330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D5C424B81CB5F42000D77330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5C424BA1CB5F42000D77330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ProxyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PageOne.ProxyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D5C424BB1CB5F42000D77330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ProxyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PageOne.ProxyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D5C424BD1CB5F42000D77330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ProxyAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PageOne.ProxyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProxyApp.app/ProxyApp";
+			};
+			name = Debug;
+		};
+		D5C424BE1CB5F42000D77330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ProxyAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PageOne.ProxyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProxyApp.app/ProxyApp";
+			};
+			name = Release;
+		};
+		D5C424C01CB5F42000D77330 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ProxyAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PageOne.ProxyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ProxyApp;
+			};
+			name = Debug;
+		};
+		D5C424C11CB5F42000D77330 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ProxyAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PageOne.ProxyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ProxyApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5C4248C1CB5F42000D77330 /* Build configuration list for PBXProject "ProxyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5C424B71CB5F42000D77330 /* Debug */,
+				D5C424B81CB5F42000D77330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5C424B91CB5F42000D77330 /* Build configuration list for PBXNativeTarget "ProxyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5C424BA1CB5F42000D77330 /* Debug */,
+				D5C424BB1CB5F42000D77330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5C424BC1CB5F42000D77330 /* Build configuration list for PBXNativeTarget "ProxyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5C424BD1CB5F42000D77330 /* Debug */,
+				D5C424BE1CB5F42000D77330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5C424BF1CB5F42000D77330 /* Build configuration list for PBXNativeTarget "ProxyAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5C424C01CB5F42000D77330 /* Debug */,
+				D5C424C11CB5F42000D77330 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5C424891CB5F42000D77330 /* Project object */;
+}
