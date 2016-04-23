@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var requestCount = 0
+
 class CustomURLProtocol:  NSURLProtocol, NSURLSessionDataDelegate, NSURLSessionTaskDelegate {
   
   private var dataTask:NSURLSessionDataTask?
@@ -22,9 +24,17 @@ class CustomURLProtocol:  NSURLProtocol, NSURLSessionDataDelegate, NSURLSessionT
   // MARK: NSURLProtocol
   
   override class func canInitWithRequest(request: NSURLRequest) -> Bool {
+    
+    if let scheme = request.URL?.scheme where (scheme.rangeOfString("http") == nil) {
+      return false
+    }
+    
     if (NSURLProtocol.propertyForKey(CustomURLProtocol.CustomKey, inRequest: request) != nil) {
       return false
     }
+    
+    requestCount += 1
+    print("Request #\(requestCount): URL = \(request.URL!.absoluteString)")
     
     return true
   }
@@ -74,13 +84,25 @@ class CustomURLProtocol:  NSURLProtocol, NSURLSessionDataDelegate, NSURLSessionT
     self.receivedData?.appendData(data)
   }
   
+  
+  // MARK: NSURLSessionTask
+  // Handle Redirects
+  
+  func URLSession(session: NSURLSession, task: NSURLSessionTask, willPerformHTTPRedirection response: NSHTTPURLResponse, newRequest request: NSURLRequest, completionHandler: (NSURLRequest?) -> Void) {
+    if let httpResponse = response as? NSHTTPURLResponse {
+      client?.URLProtocol(self, wasRedirectedToRequest: request, redirectResponse: httpResponse)
+    }
+    completionHandler(nil)
+  }
+  
   // MARK: NSURLSessionTaskDelegate
   
   func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
     if error != nil && error!.code != NSURLErrorCancelled {
       self.client?.URLProtocol(self, didFailWithError: error!)
+      NSLog("* Error url: \(self.request.URL?.absoluteString)\n* Details: \(error)")
     } else {
-      saveCachedResponse()
+//      saveCachedResponse()
       self.client?.URLProtocolDidFinishLoading(self)
     }
   }

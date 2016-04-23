@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-var requestCount = 0
+//var requestCount = 0
 let markerRequestHandled = "request-already-handled"
 
 
@@ -20,7 +20,7 @@ class MyURLProtocol: NSURLProtocol, NSURLSessionDataDelegate {
   var response: NSURLResponse!
 
   override class func canInitWithRequest(request: NSURLRequest) -> Bool {
-
+    
     if let scheme = request.URL?.scheme where (scheme.rangeOfString("http") == nil) {
       return false
     }
