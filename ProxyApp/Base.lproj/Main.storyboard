@@ -40,6 +40,19 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QdB-AT-liE"/>
+                                    <barButtonItem style="plain" id="yWc-UT-4fx">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L9L-NW-uVh">
+                                            <rect key="frame" x="277" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Off">
+                                                <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onClickProxyModeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DNf-1c-4vS"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OmW-2g-Mmw"/>
                                     <barButtonItem systemItem="refresh" id="FLe-5E-gMo">
                                         <connections>
                                             <action selector="onClickRefreshButton:" destination="BYZ-38-t0r" id="wdy-Mp-vkx"/>
@@ -63,6 +76,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="FXY-Ny-EDH" id="dCX-GD-NkB"/>
+                        <outlet property="forwardButton" destination="Gvy-j7-Wsc" id="Rgb-cD-tVK"/>
                         <outlet property="searchBar" destination="GY6-OZ-fIa" id="sMO-1a-OaS"/>
                         <outlet property="webView" destination="uCD-69-Ek1" id="ThP-5Q-XXW"/>
                     </connections>

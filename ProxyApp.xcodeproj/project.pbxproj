@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D51280451CC9B92500B94CBC /* CustomURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51280441CC9B92500B94CBC /* CustomURLProtocol.swift */; };
+		D517BC041CCC668B0054ED28 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D517BC031CCC668B0054ED28 /* Proxy.swift */; };
 		D55DD36F1CB73F2600A5A523 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DD36E1CB73F2600A5A523 /* Constants.swift */; };
 		D55DD3701CB73F2600A5A523 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DD36E1CB73F2600A5A523 /* Constants.swift */; };
 		D55DD3711CB73F2600A5A523 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DD36E1CB73F2600A5A523 /* Constants.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		D51280441CC9B92500B94CBC /* CustomURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomURLProtocol.swift; sourceTree = "<group>"; };
+		D517BC031CCC668B0054ED28 /* Proxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
 		D55DD36E1CB73F2600A5A523 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D5C424911CB5F42000D77330 /* ProxyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C424941CB5F42000D77330 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				D5C424A01CB5F42000D77330 /* Info.plist */,
 				D5E9FD6B1CB9704700D85956 /* MyURLProtocol.swift */,
 				D51280441CC9B92500B94CBC /* CustomURLProtocol.swift */,
+				D517BC031CCC668B0054ED28 /* Proxy.swift */,
 			);
 			path = ProxyApp;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				D5C424971CB5F42000D77330 /* ViewController.swift in Sources */,
 				D5E9FD6C1CB9704700D85956 /* MyURLProtocol.swift in Sources */,
 				D5C424951CB5F42000D77330 /* AppDelegate.swift in Sources */,
+				D517BC041CCC668B0054ED28 /* Proxy.swift in Sources */,
 				D55DD36F1CB73F2600A5A523 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

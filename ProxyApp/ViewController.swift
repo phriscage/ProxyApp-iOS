@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIWebViewDelegate, UISearchBarDelegate {
   @IBOutlet weak var backButton: UIBarButtonItem?
   @IBOutlet weak var forwardButton: UIBarButtonItem?
   
-  var isProxyMode:Bool = false
+//  var isProxyMode:Bool = false
   var isProduction:Bool = false
   
   override func viewDidLoad() {
@@ -64,6 +64,10 @@ class ViewController: UIViewController, UIWebViewDelegate, UISearchBarDelegate {
     self.webView?.reload()
   }
   
+    @IBAction func onClickProxyModeButton(sender: UIButton) {
+      self.proxyModeButtonClicked(sender)
+    }
+  
   //  @IBAction func onClickTestButton(sender: UIBarButtonItem) {
   //    print("Test button clicked")
   //    self.barButtonClicked(sender)
@@ -84,12 +88,13 @@ class ViewController: UIViewController, UIWebViewDelegate, UISearchBarDelegate {
   // Should Startloading view
   func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
     
-    NSLog("shouldStartLoadWithRequest request: \(request)")
     //    NSLog("Initial request.allHTTPHeaderFields: \(request.allHTTPHeaderFields)")
     if request.URL!.absoluteString.rangeOfString("^http", options: .RegularExpressionSearch) == nil {
         //NSLog("Bad URL: \(request.URL)")
         return false
     }
+    NSLog("shouldStartLoadWithRequest request: \(request)")
+
     return true
   }
   
@@ -232,6 +237,29 @@ class ViewController: UIViewController, UIWebViewDelegate, UISearchBarDelegate {
   //      let loginString = NSString(format: "%@:%@", client_id, client_secret)
   //      let loginData: NSData = loginString.dataUsingEncoding(NSUTF8StringEncoding)!
   //      let base64LoginString = loginData.base64EncodedStringWithOptions([])
+
+  // proxyMode UIButton Selected
+  func proxyModeButtonClicked(sender:UIButton)
+  {
+    dispatch_async(dispatch_get_main_queue(), {
+      
+      sender.selected = !sender.selected;
+      
+      if sender.selected == true {
+        sender.tintColor = UIColor.clearColor()
+        sender.setTitle("On", forState: UIControlState.Selected)
+        sender.setTitleColor(UIColor.greenColor(), forState: UIControlState.Selected)
+        isProxyMode = true
+        print("proxyMode on")
+      } else {
+        isProxyMode = false
+        sender.setTitle("Off", forState: UIControlState.Normal)
+        print("proxyMode off")
+      }
+      
+    });
+  }
+  
   
 //  // Airplance UIButton Selected
 //  func airplaneButtonClicked(sender:UIButton)
@@ -251,10 +279,12 @@ class ViewController: UIViewController, UIWebViewDelegate, UISearchBarDelegate {
 //      if sender.selected == true {
 //        sender.tintColor = UIColor.clearColor()
 //        sender.setTitleColor(UIColor.greenColor(), forState: UIControlState.Selected)
-//        self.proxyMode = true
+//        isProxyMode = true
+////        self.proxyMode = true
 //        print("proxyMode on")
 //      } else {
-//        self.proxyMode = false
+////        self.proxyMode = false
+//        isProxyMode = false
 //        print("proxyMode off")
 //      }
 //      

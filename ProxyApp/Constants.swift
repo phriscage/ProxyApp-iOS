@@ -22,3 +22,6 @@ let proxyFQDN = "web-proxy-1219.appspot.com"
 let proxyURL = "https://\(proxyFQDN)"
 let org = "Pageone"
 let proxyURLHeader = "\(org).Proxy.Url"
+var isProxyMode:Bool = false
+var username: String!
+var password: String!

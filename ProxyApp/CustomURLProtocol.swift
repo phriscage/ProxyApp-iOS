@@ -17,6 +17,8 @@ class CustomURLProtocol:  NSURLProtocol, NSURLSessionDataDelegate, NSURLSessionT
   private var urlResponse:NSURLResponse?
   private var receivedData:NSMutableData?
   
+  var test:Bool = false
+  
   class var CustomKey:String {
     return "myCustomKey"
   }
@@ -47,10 +49,24 @@ class CustomURLProtocol:  NSURLProtocol, NSURLSessionDataDelegate, NSURLSessionT
     
     let newRequest = self.request.mutableCopy() as! NSMutableURLRequest
     
+    // Set a custom header
+    newRequest.addValue((self.request.URL?.absoluteString)!, forHTTPHeaderField: proxyURLHeader)
+
+    // Set the CustomKey property to stop reloading NSURLProtocol
     NSURLProtocol.setProperty("true", forKey: CustomURLProtocol.CustomKey, inRequest: newRequest)
     
-    let defaultConfigObj = NSURLSessionConfiguration.defaultSessionConfiguration()
+    var defaultConfigObj:NSURLSessionConfiguration;
+    
+    if isProxyMode == true {
+      defaultConfigObj = Proxy.createSessionConfiguration("localhost:8080")
+
+//    let defaultConfigObj = NSURLSessionConfiguration.defaultSessionConfiguration()
+    } else {
+      defaultConfigObj = NSURLSessionConfiguration.defaultSessionConfiguration()
+    }
+    
     let defaultSession = NSURLSession(configuration: defaultConfigObj, delegate: self, delegateQueue: nil)
+
     
     self.dataTask = defaultSession.dataTaskWithRequest(newRequest)
     self.dataTask!.resume()
@@ -89,9 +105,11 @@ class CustomURLProtocol:  NSURLProtocol, NSURLSessionDataDelegate, NSURLSessionT
   // Handle Redirects
   
   func URLSession(session: NSURLSession, task: NSURLSessionTask, willPerformHTTPRedirection response: NSHTTPURLResponse, newRequest request: NSURLRequest, completionHandler: (NSURLRequest?) -> Void) {
-    if let httpResponse = response as? NSHTTPURLResponse {
-      client?.URLProtocol(self, wasRedirectedToRequest: request, redirectResponse: httpResponse)
-    }
+    client?.URLProtocol(self, wasRedirectedToRequest: request, redirectResponse: response)
+
+//    if let httpResponse = response as? NSHTTPURLResponse {
+//      client?.URLProtocol(self, wasRedirectedToRequest: request, redirectResponse: httpResponse)
+//    }
     completionHandler(nil)
   }
   
